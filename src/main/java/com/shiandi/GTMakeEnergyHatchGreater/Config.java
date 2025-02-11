@@ -1,4 +1,4 @@
-package com.myname.mymodid;
+package com.shiandi.GTMakeEnergyHatchGreater;
 
 import java.io.File;
 
