@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8.5-GTNH",
+  "package": "com.shiandi.GTMakeEnergyHatchGreater.mixins",
+  "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "ElectricBlastFurnaceMixin"
+  ],
+  "client": [],
+  "server": []
+}
