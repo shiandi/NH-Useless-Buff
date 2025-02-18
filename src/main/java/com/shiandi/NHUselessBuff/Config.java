@@ -1,4 +1,4 @@
-package com.shiandi.GTMakeEnergyHatchGreater;
+package com.shiandi.NHUselessBuff;
 
 import java.io.File;
 

@@ -1,4 +1,4 @@
-package com.shiandi.GTMakeEnergyHatchGreater;
+package com.shiandi.NHUselessBuff;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,18 +11,18 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 
 @Mod(
-    modid = GTMakeEnergyHatchGreater.MODID,
+    modid = NHUselessBuff.MODID,
     version = Tags.VERSION,
-    name = "GT Make Energy Hatch Greater",
+    name = "NH Useless Buff",
     acceptedMinecraftVersions = "[1.7.10]")
-public class GTMakeEnergyHatchGreater {
+public class NHUselessBuff {
 
-    public static final String MODID = "GTMakeEnergyHatchGreater";
+    public static final String MODID = "NHUselessBuff";
     public static final Logger LOG = LogManager.getLogger(MODID);
 
     @SidedProxy(
-        clientSide = "com.shiandi.GTMakeEnergyHatchGreater.ClientProxy",
-        serverSide = "com.shiandi.GTMakeEnergyHatchGreater.CommonProxy")
+        clientSide = "com.shiandi.NHUselessBuff.ClientProxy",
+        serverSide = "com.shiandi.NHUselessBuff.CommonProxy")
     public static CommonProxy proxy;
 
     @Mod.EventHandler

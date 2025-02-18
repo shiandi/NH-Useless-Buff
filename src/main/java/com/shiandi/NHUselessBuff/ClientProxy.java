@@ -1,4 +1,4 @@
-package com.shiandi.GTMakeEnergyHatchGreater;
+package com.shiandi.NHUselessBuff;
 
 public class ClientProxy extends CommonProxy {
 

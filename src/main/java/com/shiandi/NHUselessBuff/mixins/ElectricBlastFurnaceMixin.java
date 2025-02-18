@@ -1,4 +1,4 @@
-package com.shiandi.GTMakeEnergyHatchGreater.mixins;
+package com.shiandi.NHUselessBuff.mixins;
 
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.transpose;
 import static gregtech.api.enums.HatchElement.*;
@@ -49,7 +49,6 @@ public abstract class ElectricBlastFurnaceMixin extends MTEAbstractMultiFurnace<
                 .dot(1)
                 .buildAndChain(GregTechAPI.sBlockCasings1, 11))
         .build();
-
 
     @Override
     public IStructureDefinition<MTEElectricBlastFurnace> getStructureDefinition() {
