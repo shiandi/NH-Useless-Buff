@@ -5,7 +5,9 @@
   "target": "@env(DEFAULT)",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "ElectricBlastFurnaceMixin"
+    "MultiMachines.ElectricBlastFurnaceMixin",
+    "MultiMachines.MTEAlloyBlastSmelterMixin",
+    "MultiMachines.MTEVacuumFreezerMixin"
   ],
   "client": [],
   "server": []

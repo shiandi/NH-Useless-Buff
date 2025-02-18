@@ -1,4 +1,4 @@
-package com.shiandi.NHUselessBuff.mixins;
+package com.shiandi.NHUselessBuff.mixins.MultiMachines;
 
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.transpose;
 import static gregtech.api.enums.HatchElement.*;
@@ -6,6 +6,7 @@ import static gregtech.api.util.GTStructureUtility.buildHatchAdder;
 import static gregtech.api.util.GTStructureUtility.ofCoil;
 
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Unique;
 
 import com.gtnewhorizon.structurelib.alignment.constructable.ISurvivalConstructable;
@@ -50,7 +51,11 @@ public abstract class ElectricBlastFurnaceMixin extends MTEAbstractMultiFurnace<
                 .buildAndChain(GregTechAPI.sBlockCasings1, 11))
         .build();
 
-    @Override
+    /**
+     * @author shiandi
+     * @reason 替换原来的结构检测
+     */
+    @Overwrite
     public IStructureDefinition<MTEElectricBlastFurnace> getStructureDefinition() {
         return STRUCTURE_DEFINITION;
     }
