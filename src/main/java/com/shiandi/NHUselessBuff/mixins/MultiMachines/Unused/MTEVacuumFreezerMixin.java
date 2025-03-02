@@ -1,4 +1,4 @@
-package com.shiandi.NHUselessBuff.mixins.MultiMachines;
+package com.shiandi.NHUselessBuff.mixins.MultiMachines.Unused;
 
 import static gregtech.api.enums.HatchElement.*;
 import static gregtech.api.enums.HatchElement.Energy;

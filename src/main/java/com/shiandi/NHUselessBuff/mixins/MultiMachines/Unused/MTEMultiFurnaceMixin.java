@@ -1,4 +1,4 @@
-package com.shiandi.NHUselessBuff.mixins.MultiMachines;
+package com.shiandi.NHUselessBuff.mixins.MultiMachines.Unused;
 
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.*;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.ofBlock;

@@ -1,4 +1,4 @@
-package com.shiandi.NHUselessBuff.mixins.MultiMachines;
+package com.shiandi.NHUselessBuff.mixins.MultiMachines.Unused;
 
 import net.minecraft.item.ItemStack;
 
