@@ -1,4 +1,9 @@
-
 plugins {
     id 'com.gtnewhorizons.gtnhconvention'
 }
+
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+
+version = "0.0.3"
