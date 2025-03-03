@@ -1,6 +1,5 @@
 package com.shiandi.NHUselessBuff.mixins.MultiMachines;
 
-import machines.Chaos;
 import net.minecraft.item.ItemStack;
 
 import org.spongepowered.asm.mixin.Mixin;
@@ -13,6 +12,7 @@ import com.gtnewhorizon.structurelib.alignment.constructable.ISurvivalConstructa
 
 import gregtech.api.interfaces.tileentity.IGregTechTileEntity;
 import gregtech.api.metatileentity.implementations.MTEExtendedPowerMultiBlockBase;
+import machines.Chaos;
 
 @Mixin(value = Chaos.class, remap = false)
 public abstract class ChaosMixin extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISurvivalConstructable {
