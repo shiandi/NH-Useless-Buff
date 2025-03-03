@@ -30,7 +30,7 @@ public abstract class MTEHatchCraftingInputMEMixin extends MTEHatchInputBus
     }
 
     @Shadow
-    private boolean additionalConnection;
+    boolean additionalConnection;
 
     @Inject(method = "updateValidGridProxySides", at = @At("HEAD"))
     private void updateValidGridProxySides(CallbackInfo ci) {
