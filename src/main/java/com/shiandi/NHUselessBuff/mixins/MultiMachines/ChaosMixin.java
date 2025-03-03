@@ -27,6 +27,6 @@ public abstract class ChaosMixin extends MTEExtendedPowerMultiBlockBase<Chaos> i
     @Inject(method = "checkMachine", at = @At("RETURN"), cancellable = true)
     private void checkMachine(IGregTechTileEntity aBaseMetaTileEntity, ItemStack aStack,
         CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(checkPiece(STRUCTURE_PIECE_MAIN, 1, 1, 0));
+        cir.setReturnValue(cir.getReturnValue() || checkPiece(STRUCTURE_PIECE_MAIN, 1, 1, 0));
     }
 }
