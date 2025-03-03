@@ -14,6 +14,7 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
     modid = NHUselessBuff.MODID,
     version = Tags.VERSION,
     name = "NH Useless Buff",
+    dependencies = "required-after:gregtech;" + "required-after:gtnothard;",
     acceptedMinecraftVersions = "[1.7.10]")
 public class NHUselessBuff {
 
