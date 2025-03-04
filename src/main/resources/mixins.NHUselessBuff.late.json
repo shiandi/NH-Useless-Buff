@@ -6,9 +6,7 @@
   "target": "@env(DEFAULT)",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "MTEHatchCraftingInputMEMixin",
-    "MTEHatchOutputBusMEMixin",
-    "MTEHatchOutputMEMixin"
+    "MultiMachines.ChaosMixin"
   ],
   "client": [],
   "server": []
