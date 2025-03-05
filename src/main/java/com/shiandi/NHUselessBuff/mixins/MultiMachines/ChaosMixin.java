@@ -22,13 +22,11 @@ public abstract class ChaosMixin extends MTEExtendedPowerMultiBlockBase<Chaos> i
     }
 
     @Shadow
-    private boolean checkHatches() {
-        return mMaintenanceHatches.size() == 1;
-    }
+    private static final String STRUCTURE_PIECE_MAIN = "main";
 
     @Inject(method = "checkMachine", at = @At("RETURN"), cancellable = true)
     private void checkMachine(IGregTechTileEntity aBaseMetaTileEntity, ItemStack aStack,
         CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(checkPiece("main", 1, 1, 0) && checkHatches());
+        cir.setReturnValue(checkPiece(STRUCTURE_PIECE_MAIN, 1, 1, 0));
     }
 }
