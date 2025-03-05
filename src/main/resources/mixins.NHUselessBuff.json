@@ -5,11 +5,7 @@
   "refmap": "mixins.NHUselessBuff.refmap.json",
   "target": "@env(DEFAULT)",
   "compatibilityLevel": "JAVA_8",
-  "mixins": [
-    "MTEHatchCraftingInputMEMixin",
-    "MTEHatchOutputBusMEMixin",
-    "MTEHatchOutputMEMixin"
-  ],
+  "mixins": [],
   "client": [],
   "server": []
 }
