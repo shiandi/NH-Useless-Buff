@@ -25,7 +25,7 @@ public abstract class MTEHatchOutputBusMEMixin extends MTEHatchOutputBus impleme
     boolean additionalConnection;
 
     @Inject(method = "updateValidGridProxySides", at = @At("HEAD"), cancellable = true)
-    public void updateEntity(CallbackInfo ci) {
+    public void updateValidGridProxySides(CallbackInfo ci) {
         if (!additionalConnection) {
             getProxy().setValidSides(EnumSet.complementOf(EnumSet.of(ForgeDirection.UNKNOWN)));
         } else {

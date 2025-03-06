@@ -4,6 +4,7 @@ import java.util.EnumSet;
 
 import net.minecraftforge.common.util.ForgeDirection;
 
+import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -17,7 +18,9 @@ import gregtech.api.interfaces.modularui.IAddUIWidgets;
 import gregtech.api.metatileentity.implementations.MTEHatchInputBus;
 import gregtech.common.tileentities.machines.IRecipeProcessingAwareHatch;
 import gregtech.common.tileentities.machines.ISmartInputHatch;
+import gregtech.common.tileentities.machines.MTEHatchInputBusME;
 
+@Mixin(value = MTEHatchInputBusME.class, remap = false)
 public abstract class MTEHatchInputBusMEMixin extends MTEHatchInputBus implements IConfigurationCircuitSupport,
     IRecipeProcessingAwareHatch, IAddGregtechLogo, IAddUIWidgets, IPowerChannelState, ISmartInputHatch, IDataCopyable {
 
@@ -29,7 +32,7 @@ public abstract class MTEHatchInputBusMEMixin extends MTEHatchInputBus implement
     private boolean additionalConnection;
 
     @Inject(method = "updateValidGridProxySides", at = @At("HEAD"), cancellable = true)
-    public void updateEntity(CallbackInfo ci) {
+    public void updateValidGridProxySides(CallbackInfo ci) {
         if (!additionalConnection) {
             getProxy().setValidSides(EnumSet.complementOf(EnumSet.of(ForgeDirection.UNKNOWN)));
         } else {
