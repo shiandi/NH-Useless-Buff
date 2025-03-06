@@ -4,25 +4,28 @@ import java.util.EnumSet;
 
 import net.minecraftforge.common.util.ForgeDirection;
 
-import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import appeng.api.implementations.IPowerChannelState;
-import gregtech.api.metatileentity.implementations.MTEHatchOutput;
-import gregtech.common.tileentities.machines.MTEHatchOutputME;
+import gregtech.api.interfaces.IDataCopyable;
+import gregtech.api.interfaces.modularui.IAddGregtechLogo;
+import gregtech.api.interfaces.modularui.IAddUIWidgets;
+import gregtech.api.metatileentity.implementations.MTEHatchInput;
+import gregtech.common.tileentities.machines.IRecipeProcessingAwareHatch;
+import gregtech.common.tileentities.machines.ISmartInputHatch;
 
-@Mixin(value = MTEHatchOutputME.class, remap = false)
-public abstract class MTEHatchOutputMEMixin extends MTEHatchOutput implements IPowerChannelState {
+public abstract class MTEHatchInputMEMixin extends MTEHatchInput implements IPowerChannelState, IAddGregtechLogo,
+    IAddUIWidgets, IRecipeProcessingAwareHatch, ISmartInputHatch, IDataCopyable {
 
-    public MTEHatchOutputMEMixin(int aID, String aName, String aNameRegional, int aTier) {
+    public MTEHatchInputMEMixin(int aID, String aName, String aNameRegional, int aTier) {
         super(aID, aName, aNameRegional, aTier);
     }
 
     @Shadow
-    boolean additionalConnection;
+    private boolean additionalConnection;
 
     @Inject(method = "updateValidGridProxySides", at = @At("HEAD"), cancellable = true)
     public void updateEntity(CallbackInfo ci) {

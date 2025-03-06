@@ -24,6 +24,8 @@ public class LateMixin implements ILateMixinLoader {
             Arrays.asList(
                 "MultiMachines.ChaosMixin",
                 "MTEHatchCraftingInputMEMixin",
+                "MTEHatchInputBusMEMixin",
+                "MTEHatchInputMEMixin",
                 "MTEHatchOutputBusMEMixin",
                 "MTEHatchOutputMEMixin"));
 
